@@ -6,8 +6,9 @@ class UserMailer < ApplicationMailer
   #   en.user_mailer.event_email.subject
   #
   def event_email
-    @greeting = "Hi"
-
-    mail to: "to@example.org"
+    # @greeting = "Hi"
+    @user = params[:user]
+    mail to: @user.eamil,
+         subject: "イベントのお知らせ"
   end
 end
